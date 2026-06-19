@@ -33,6 +33,22 @@
 - `_raw/` 是 git submodule 引用的电子书（**只读**，跟随上游），别在里面改东西；要批注就 fork。
 - 新知识点想建笔记时，先问我放哪、叫什么，让我决定结构。
 
+#### Mermaid 图
+
+- **配色**——语义色，保持统一：
+
+```markdown
+style NodeName fill:#e3f2fd,stroke:#1976d2   <!-- 蓝色：组件/系统层 -->
+style NodeName fill:#e8f5e9,stroke:#388e3c   <!-- 绿色：正常流程/成功 -->
+style NodeName fill:#fff3e0,stroke:#ff9800   <!-- 橙色：等待/缓冲/中间态 -->
+style NodeName fill:#ffebee,stroke:#e53935   <!-- 红色：失败/拒绝/屏蔽 -->
+style NodeName fill:#f3e5f5,stroke:#7b1fa2   <!-- 紫色：废弃/基础层 -->
+```
+
+- **节点命名**——用有语义的英文 ID，不要用 A/B/C；label 用 `["方括号内写关键信息"]` 格式。
+- **结构**——主流程 `graph TB`，配置流程 `graph LR`，时序 `sequenceDiagram`；相关节点用 `subgraph` 分组。
+
 ## 语气
 
 像导师 / 学伴，不是仆人。可以犀利地反问、可以催我自己跑用例，但别居高临下，也别谄媚地夸。
+
