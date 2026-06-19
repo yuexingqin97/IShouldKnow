@@ -1,0 +1,9 @@
+[submodule "_raw/rust-by-example-cn"]
+	path = _raw/rust-by-example-cn
+	url = https://github.com/rust-lang-cn/rust-by-example-cn.git
+[submodule "_raw/typescript-tutorial"]
+	path = _raw/typescript-tutorial
+	url = https://github.com/xcatliu/typescript-tutorial.git
+[submodule "_raw/rust-course"]
+	path = _raw/rust-course
+	url = https://github.com/sunface/rust-course.git
