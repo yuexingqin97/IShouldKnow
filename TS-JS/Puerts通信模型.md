@@ -89,6 +89,8 @@ if (!PassByPointer) {
 
 UObject 不拷贝——只包一层存指针的 JS 代理对象。GC 负责生命周期。
 
+> 深入：`void*` + `UScriptStruct*` 怎么还原成 JS 对象、`PassByPointer` 的所有权语义（**不是读写开关**）、含 `UObject*` 的 struct 与 UE GC 的「被动失效」模型 —— 见 [Puerts 结构体跨边界与所有权](./Puerts结构体跨边界/Puerts结构体跨边界与所有权.md)。
+
 ## TS 侧 Vec3：计算锁在 V8 内
 
 JS 没有值类型，每次 `FVector` 过边界都是一次 `new + CopySingleValue + V8 对象 + GC`。高频向量运算必须在 TS 侧做：
